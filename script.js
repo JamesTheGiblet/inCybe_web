@@ -15,3 +15,22 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
+// Modal logic
+document.querySelectorAll('.modal-trigger').forEach(trigger => {
+  trigger.addEventListener('click', () => {
+    const modalId = trigger.getAttribute('data-modal');
+    const modal = document.getElementById(modalId);
+    if (modal) modal.style.display = 'block';
+  });
+});
+document.querySelectorAll('.close-button').forEach(button => {
+  button.addEventListener('click', () => {
+    button.closest('.modal').style.display = 'none';
+  });
+});
+window.addEventListener('click', (event) => {
+  if (event.target.classList.contains('modal')) {
+    event.target.style.display = 'none';
+  }
+});

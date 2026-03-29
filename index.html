@@ -162,7 +162,7 @@
 <section class="section" id="principles">
   <div class="s-label"><span class="s-n">03</span>Principles</div>
   <div class="prlist">
-    <div class="pri"><span class="prn">01</span><div class="prb"><strong>Privacy by default</strong><span>100% local LLM via Ollama. No data leaves the device unless you explicitly choose it.</span></div></div>
+    <div class="pri modal-trigger" data-modal="privacy-modal"><span class="prn">01</span><div class="prb"><strong>Privacy by default <span class="info-icon">ℹ</span></strong><span>100% local LLM via Ollama. No data leaves the device unless you explicitly choose it.</span></div></div>
     <div class="pri"><span class="prn">02</span><div class="prb"><strong>Modular architecture</strong><span>Every component is independently deployable. Build the parts that matter now.</span></div></div>
     <div class="pri"><span class="prn">03</span><div class="prb"><strong>Safety first</strong><span>No destructive action without confirmation. Atomic writes, version history, rollback — always.</span></div></div>
     <div class="pri"><span class="prn">04</span><div class="prb"><strong>Simplicity</strong><span>Working prototypes before complexity. The smallest thing that moves you forward.</span></div></div>
@@ -215,6 +215,21 @@
   </div>
   <span class="foot-r">inCybe.co.uk © all rights reserved</span>
 </footer>
+
+<!-- MODAL -->
+<div id="privacy-modal" class="modal">
+  <div class="modal-content">
+    <span class="close-button">&times;</span>
+    <h2>Privacy by default</h2>
+    <p>At inCybe, we believe that your data is yours alone. Our "Privacy by Default" principle means:</p>
+    <ul>
+      <li><strong>100% Local Inference:</strong> All AI processing happens on your device using Ollama.</li>
+      <li><strong>Zero Cloud Dependency:</strong> No data is sent to external servers for processing.</li>
+      <li><strong>User-Controlled Data:</strong> You decide if and when any information is shared.</li>
+      <li><strong>Transparency:</strong> Our stack is built on open-source tools, allowing for community auditing.</li>
+    </ul>
+  </div>
+</div>
 
 <script src="script.js"></script>
 </body>
