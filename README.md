@@ -1,8 +1,8 @@
 # 🌐 inCybe
 
-**Making tech simple**
+**Making simple tech**
 
-![Status: Phase 1](https://img.shields.io/badge/Status-Phase%201%20In%20Progress-orange)
+![Status: Phase 2](https://img.shields.io/badge/Status-Phase%202%20In%20Progress-orange)
 ![Version: 1.1](https://img.shields.io/badge/Version-1.1-blue)
 ![Updated: March 2026](https://img.shields.io/badge/Updated-March%202026-brightgreen)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow)
@@ -44,9 +44,10 @@ The stack is drawn directly from the proven Giblets Creations toolchain.
 | Layer | Choice |
 | :--- | :--- |
 | **LLM (local)** | Ollama (Llama 3 / Mistral / Phi-3) |
-| **Orchestration** | Legion (Semantic capsule routing) |
+| **Orchestration** | Legion (Giblets Internal - Operational) |
 | **Embeddings** | Local Ollama (nomic-embed-text) |
 | **Vector Store** | Supabase pgvector |
+| **Local Backup** | SQLite (Local persistent mirror) |
 | **Runtime** | Node.js |
 | **Process Manager** | PM2 |
 | **Frontend** | Vite PWA |
@@ -60,27 +61,15 @@ The stack is drawn directly from the proven Giblets Creations toolchain.
 
 ## 🧱 Roadmap
 
-### PHASE 1 — LLM + Obsidian Integration (⚙️ In Progress)
-Connect Ollama to an Obsidian vault and enable question-answering
-grounded entirely in the vault's own content. This phase establishes the
-knowledge layer that everything else builds upon.
+### PHASE 1 — LLM + Obsidian Integration (✅ Complete)
+**Result:** Full local RAG capabilities established. Vault reading, embedding pipelines, and semantic querying are operational.
 
-#### 📍 Milestone 1.1 — Project Scaffold
-- [ ] Initialise monorepo (/incybe)
-- [ ] Set up Node.js runtime with PM2 config
-- [ ] Configure environment (.env)
+### ✅ Phase 1 Success Criteria
+- [x] "Ask Incybe" returns correct notes with citations.
+- [x] 100% vault-grounded responses via Ollama.
+- [x] Response times validated on S24 Ultra hardware.
 
-#### 📍 Milestone 1.2 — Vault Reader
-- [ ] Recursive Markdown file scanner
-- [ ] Frontmatter parser
-- [ ] Wikilink resolver
-
-#### 📍 Milestone 1.3 — Embedding Pipeline
-- [ ] Supabase project setup (pgvector)
-- [ ] Chunking strategy implementation
-- [ ] Embedding generation via Ollama
-
-### PHASE 2 — AI-Assisted Note Management (📋 Planned)
+### PHASE 2 — AI-Assisted Note Management (⚙️ In Progress)
 Use the LLM to actively maintain and improve the Obsidian vault. The AI shifts
 from passive Q&A to active collaborator — but always with the user's explicit
 approval before touching anything.
@@ -99,6 +88,14 @@ and connected.
 A fully AI-native operating system layer. Intentionally open-ended — the
 project evolves as the earlier phases mature. Phase 4 draws deeply from the
 broader Giblets Creations platform ecosystem. 
+
+---
+
+### 🔄 Recovery & Sovereignty Strategy
+- **Primary Source:** Obsidian vault (Markdown files).
+- **Cloud Mirror:** Supabase pgvector (used for high-performance retrieval).
+- **Local Backup:** Persistent SQLite database storing local mirrors of indices.
+- **Sovereignty:** System is rebuildable from source Markdown if cloud sync is disabled.
 
 ---
 
@@ -126,4 +123,4 @@ broader Giblets Creations platform ecosystem.
 ---
 
 **inCybe · Giblets Creations · 2026**
-*"I wanted it. So I forged it. Now forge yours."*
+*Making simple tech*
