@@ -12,8 +12,8 @@
 ## 🦸 Project Heroes
 | Role | Entity |
 | :--- | :--- |
-| **Builder** | Giblets Creations |
-| **Vision** | Abe |
+| **Builder** | Giblets Creations x Abe |
+
 
 ---
 
@@ -52,7 +52,6 @@ The stack is drawn directly from the proven Giblets Creations toolchain.
 | **Process Manager** | PM2 |
 | **Frontend** | Vite PWA |
 | **Mobile Target** | Samsung S24 Ultra / Termux |
-| **Notifications** | Telegram bot |
 | **File Semantics** | SCP (Semantic Capsule Protocol) |
 | **AI Assistant** | BuddAI |
 | **Dashboard** | Forge HQ |

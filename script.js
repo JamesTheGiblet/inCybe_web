@@ -3,6 +3,19 @@ const io = new IntersectionObserver(entries =>
 , {threshold:0.1});
 document.querySelectorAll(".vcell,.pri,.phrow").forEach(el => io.observe(el));
 
+// Video scroll trigger logic
+const videoIO = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    const video = entry.target;
+    if (entry.isIntersecting) {
+      video.play();
+    } else {
+      video.pause();
+    }
+  });
+}, { threshold: 0.5 });
+document.querySelectorAll('video').forEach(vid => videoIO.observe(video));
+
 // Smooth scroll for all anchor links starting with #
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
