@@ -52,9 +52,10 @@ The stack is drawn directly from the proven Giblets Creations toolchain.
 | **Process Manager** | PM2 |
 | **Frontend** | Vite PWA |
 | **Mobile Target** | Samsung S24 Ultra / Termux |
+| **Aesthetic** | Inverted Space Theme (Dark/Deep Space) |
 | **File Semantics** | SCP (Semantic Capsule Protocol) |
 | **AI Assistant** | BuddAI |
-| **Dashboard** | Forge HQ |
+| **Dashboard** | Relevance Forge HQ |
 
 ---
 

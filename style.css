@@ -243,7 +243,7 @@ footer{
   footer{padding:1.2rem;flex-direction:column;align-items:flex-start;gap:.5rem}
 }
 
-/* ── VAULT & FORGE SECTIONS ──────────────────────── */
+/* ── VAULT & RELEVANCE FORGE SECTIONS ────────────── */
 .section.inverted {
   background: var(--black);
   color: var(--white);
@@ -253,9 +253,16 @@ footer{
 .section.inverted h3 { color: var(--blue); }
 .section.inverted p { color: var(--g4); }
 
-.section.dark .vcell h3 { color: var(--white); }
-.section.dark .vgrid, 
-.section.dark .vcell { border-color: var(--g1); }
+/* ── LABEL COLLAB ────────────────────────────────── */
+.label-collab {
+  font-size: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--g3);
+  margin-top: 0.5rem;
+}
+.label-collab span { color: var(--blue); }
 
 .system-feed {
   width: 100%;
@@ -272,7 +279,7 @@ footer{
   overflow: hidden;
 }
 
-.forge-description {
+.relevance-forge-description {
   font-family: monospace;
   padding: 2rem;
   border-left: 2px solid var(--blue);
