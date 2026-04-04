@@ -14,7 +14,7 @@ const videoIO = new IntersectionObserver(entries => {
     }
   });
 }, { threshold: 0.5 });
-document.querySelectorAll('video').forEach(vid => videoIO.observe(video));
+document.querySelectorAll('video').forEach(vid => videoIO.observe(vid));
 
 // Smooth scroll for all anchor links starting with #
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {

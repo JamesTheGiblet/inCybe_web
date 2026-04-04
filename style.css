@@ -253,6 +253,10 @@ footer{
 .section.inverted h3 { color: var(--blue); }
 .section.inverted p { color: var(--g4); }
 
+.section.dark .vcell h3 { color: var(--white); }
+.section.dark .vgrid, 
+.section.dark .vcell { border-color: var(--g1); }
+
 .system-feed {
   width: 100%;
   max-width: 900px;
