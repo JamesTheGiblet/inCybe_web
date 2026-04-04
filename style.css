@@ -264,6 +264,17 @@ footer{
 }
 .label-collab span { color: var(--blue); }
 
+/* ── LABEL COLLAB ────────────────────────────────── */
+.label-collab {
+  font-size: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--g3);
+  margin-top: 0.5rem;
+}
+.label-collab span { color: var(--blue); }
+
 .system-feed {
   width: 100%;
   max-width: 900px;
