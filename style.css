@@ -104,11 +104,14 @@ nav{
 .nk{font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--g3);line-height:1.5}
 
 /* ── 4DATA SECTION ────────────────────────────────── */
-.fourdata{
-  padding:0;border-bottom:1px solid var(--g5);
-  display:grid;grid-template-columns:1fr 1fr;
-  min-height:520px;overflow:hidden;
+.fourdata-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid var(--g5);
+  min-height: 520px;
+  overflow: hidden;
 }
+
 .fourdata-visual{
   position:relative;overflow:hidden;
   background:var(--black);

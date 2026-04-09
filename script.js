@@ -1,7 +1,7 @@
 const io = new IntersectionObserver(entries =>
   entries.forEach(e => { if(e.isIntersecting) e.target.classList.add("in"); })
 , {threshold:0.1});
-document.querySelectorAll(".vcell,.pri,.phrow").forEach(el => io.observe(el));
+document.querySelectorAll(".vcell,.pri,.phrow,.classified,.inverted").forEach(el => io.observe(el));
 
 // Video scroll trigger logic
 const videoIO = new IntersectionObserver(entries => {
