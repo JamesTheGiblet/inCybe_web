@@ -1,3 +1,29 @@
+/* ── NAVIGATION ── */
+nav {
+  position: sticky; top: 0; z-index: 200; display: flex; align-items: center; justify-content: space-between;
+  padding: .85rem 2.5rem; background: rgba(249, 249, 247, .94); backdrop-filter: blur(14px); border-bottom: 1px solid var(--g5);
+}
+.nav-brand { display: flex; align-items: center; gap: .6rem; text-decoration: none; }
+.nav-logo { height: 36px; width: auto; mix-blend-mode: multiply; }
+.nav-name { font-size: 1.05rem; font-weight: 700; letter-spacing: -.025em; color: var(--black); }
+.nav-collab { font-size: .55rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--g3); border-left: 1px solid var(--g5); padding-left: .75rem; margin-left: .2rem; }
+.nav-collab span { color: var(--blue); }
+.nav-links { list-style: none; display: flex; gap: 1.8rem; }
+.nav-links a { font-size: .68rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--g3); text-decoration: none; transition: color .18s; }
+.nav-links a:hover { color: var(--blue); }
+.nav-badge { display: flex; align-items: center; gap: .4rem; font-size: .58rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; background: var(--black); color: var(--white); padding: .28rem .7rem; border-radius: 100px; }
+
+/* ── FOOTER ── */
+footer { padding: 1.5rem 2.5rem; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--g5); }
+.foot-l { display: flex; align-items: center; gap: .8rem; }
+.foot-logo { height: 26px; width: auto; mix-blend-mode: multiply; }
+.foot-name { font-size: .65rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--g4); }
+.foot-sep { width: 1px; height: 14px; background: var(--g5); }
+.foot-collab { font-size: .6rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--g4); }
+.foot-r { font-size: .6rem; color: var(--g4); }
+.foot-license a { font-size: 0.65rem; color: var(--blue); text-decoration: none; opacity: 0.8; }
+.foot-license a:hover { opacity: 1; text-decoration: underline; }
+
 /* ── BUTTONS ── */
 .btn {
   font-family: var(--f);

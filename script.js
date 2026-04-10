@@ -13,7 +13,7 @@ const videoIO = new IntersectionObserver(entries => {
       video.pause();
     }
   });
-}, { threshold: 0.5 });
+}, { threshold: 0.2 });
 document.querySelectorAll('video').forEach(vid => videoIO.observe(vid));
 
 // Smooth scroll for all anchor links starting with #
