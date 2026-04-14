@@ -1,7 +1,7 @@
 const io = new IntersectionObserver(entries =>
   entries.forEach(e => { if(e.isIntersecting) e.target.classList.add("in"); })
 , {threshold:0.1});
-document.querySelectorAll(".vcell,.pri,.phrow,.classified,.inverted").forEach(el => io.observe(el));
+document.querySelectorAll(".vcell,.phrow,.inverted").forEach(el => io.observe(el));
 
 // Video scroll trigger logic
 const videoIO = new IntersectionObserver(entries => {
@@ -29,21 +29,25 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// Modal logic
-document.querySelectorAll('.modal-trigger').forEach(trigger => {
-  trigger.addEventListener('click', () => {
-    const modalId = trigger.getAttribute('data-modal');
-    const modal = document.getElementById(modalId);
-    if (modal) modal.style.display = 'block';
-  });
-});
-document.querySelectorAll('.close-button').forEach(button => {
-  button.addEventListener('click', () => {
-    button.closest('.modal').style.display = 'none';
-  });
-});
-window.addEventListener('click', (event) => {
-  if (event.target.classList.contains('modal')) {
-    event.target.style.display = 'none';
+// Fetch and render Markdown documents
+async function loadDoc(url) {
+  const container = document.getElementById('md-container');
+  container.innerHTML = '<p style="color: var(--blue);">Loading document...</p>';
+  
+  try {
+    const response = await fetch(url);
+    if (!response.ok) throw new Error('Document could not be found.');
+    
+    const markdownText = await response.text();
+    container.innerHTML = marked.parse(markdownText);
+  } catch (error) {
+    container.innerHTML = `<p style="color: red;">Error: ${error.message}</p>`;
   }
-});
+}
+
+// Mobile Menu Toggle
+const mobileToggle = document.querySelector('.mobile-toggle');
+const nav = document.querySelector('nav');
+if (mobileToggle) {
+  mobileToggle.addEventListener('click', () => nav.classList.toggle('nav-open'));
+}
